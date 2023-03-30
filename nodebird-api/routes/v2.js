@@ -1,13 +1,9 @@
 const express = require('express');
-// const cors=require('cors');
+
 const { verifyToken, apiLimiter, corsWhenDomainMatches } = require('../middlewares');
 const { createToken, tokenTest, getMyPosts, getPostsByHashtag } = require('../controllers/v2');
 
 const router = express.Router();
-/* router.use(cors({
-     credentials: true,
- }));
-*/
 
 router.use(corsWhenDomainMatches);
 
